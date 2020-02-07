@@ -1,4 +1,4 @@
-卒論をLaTexで。
+卒論をLaTeXで。
 ======
 
 まえがき
@@ -28,11 +28,11 @@ OSはWindowsベースで説明しています。MacでもLinuxでも基本的に
 
 LaTeX is 何
 -----------------------
-これは[tinoji](https://github.com/tinoji)が[初めてLaTexで書いたレポート](https://www.slideshare.net/ssuserbd0784/ss-57672851)です。こんな感じのPDFが作れるようになるやつです。
+これは[tinoji](https://github.com/tinoji)が[初めてLaTeXで書いたレポート](https://www.slideshare.net/ssuserbd0784/ss-57672851)です。こんな感じのPDFが作れるようになるやつです。
 
-TODO: 画像
+<img src="https://github.com/tinoji/sotsuron_wo_LaTeX_de/blob/master/images/tex_sample.png" width="500px">
 
-今はMicrosoft Wordでも数式がかなりキレイに挿入できるようになったりしているので、ぶっちゃけそれもありかもしれません。好きなものを使うのが一番です。
+今はMicrosoft Wordでも数式がかなりキレイに挿入できるようになったりしているので、ぶっちゃけそれもありかもしれません。好きなものを使いましょう。
 
 <br>
 
@@ -164,7 +164,7 @@ jsbookにしよう
 
 ひとつのファイルに何万字も書いて図を入れて数式入れて。。。ってのは無理があります。なので、**各チャプターごとにtexファイルを分割**し書いていきます。`\input{}`を使えば、複数のtexファイルをひとつにまとめることができます。ですが、最後に一気にタイプセットして細かい調整をしていくというのは大変ですね。**タイプセットも各チャプターごと**にできた方が絶対便利です。[こちら](http://khmtvx.hatenablog.com/entry/2013/08/19/223003)を参考に。
 
-TODO: 図
+<img src="https://github.com/tinoji/sotsuron_wo_LaTeX_de/blob/master/images/chapter.jpg" width="500px">
 
 上図のような構成にして、各チャプターのtexファイルと`parent.tex`をタイプセットしてみてください。どちらもタイプセットできればOKです。
 
@@ -193,18 +193,12 @@ powerpointで作った場合、上のサイト通りにやると少しずれた�
 
 また、表紙のtexファイルは個別に作成して`\input{}`で取り込むのが良いと思います。最終的なディレクトリ構成は下図のようになります。
 
-TODO
-\[f:id:kichiku\_kikuchi:20160130234205j:plain\]
-
+<img src="https://github.com/tinoji/sotsuron_wo_LaTeX_de/blob/master/images/directory_layout.jpg" width="500px">
 
 目次をつくろう
 --------------
 サクッとできるはずです。  
 http://www.latex-cmd.com/struct/contents.html
-
-テンプレート例
-------------
-TODO
 
 <br>
 

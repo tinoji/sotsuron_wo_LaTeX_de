@@ -1,4 +1,4 @@
-卒論をLaTexで。
+卒論をLaTeXで。
 ======
 
 まえがき
@@ -28,11 +28,11 @@ OSはWindowsベースで説明しています。MacでもLinuxでも基本的に
 
 LaTeX is 何
 -----------------------
-これは[tinoji](https://github.com/tinoji)が[初めてLaTexで書いたレポート](https://www.slideshare.net/ssuserbd0784/ss-57672851)です。こんな感じのPDFが作れるようになるやつです。
+これは[tinoji](https://github.com/tinoji)が[初めてLaTeXで書いたレポート](https://www.slideshare.net/ssuserbd0784/ss-57672851)です。こんな感じのPDFが作れるようになるやつです。
 
 <img src="https://github.com/tinoji/sotsuron_wo_LaTeX_de/blob/master/images/tex_sample.png" width="500px">
 
-今はMicrosoft Wordでも数式がかなりキレイに挿入できるようになったりしているので、ぶっちゃけそれもありかもしれません。好きなものを使うのが一番です。
+今はMicrosoft Wordでも数式がかなりキレイに挿入できるようになったりしているので、ぶっちゃけそれもありかもしれません。好きなものを使いましょう。
 
 <br>
 
@@ -199,10 +199,6 @@ powerpointで作った場合、上のサイト通りにやると少しずれた�
 --------------
 サクッとできるはずです。  
 http://www.latex-cmd.com/struct/contents.html
-
-テンプレート例
-------------
-TODO
 
 <br>
 

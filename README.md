@@ -141,9 +141,7 @@ Mendeleyと連携する方法は[こちら](http://pioneerboy.hatenablog.com/ent
 一度短いレポートをつくってみよう
 =======================
 ここまでの知識をできるだけ使って短いレポートでも作ってみましょう。  
-冒頭に載せたレポートのtexファイルがPCに残っていたので貼っておきます。画像がないとコンパイルはできませんが、参考にしてください。
-
-TODO
+[冒頭に載せたレポートのtexファイルがPCに残っていたので置いておきます](https://github.com/tinoji/sotsuron_wo_LaTeX_de/tree/master/examples/report)。
 
 <br>
 

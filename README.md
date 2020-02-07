@@ -200,6 +200,11 @@ http://www.latex-cmd.com/struct/contents.html
 
 <br>
 
+ここまでできると、LaTeXの最低限のエッセンスは習得できたんじゃないかと思います。つまり**卒論が書けます**！！！頑張ってください〜〜 :v:
+
+<br>
+
+
 Advanced編
 ==========
 

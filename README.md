@@ -28,7 +28,7 @@ OSはWindowsベースで説明しています。MacでもLinuxでも基本的に
 
 LaTeX is 何
 -----------------------
-これは[tinoji](https://github.com/tinoji)が[初めてLaTeXで書いたレポート](https://www.slideshare.net/ssuserbd0784/ss-57672851)です。こんな感じのPDFが作れるようになるやつです。
+これは[tinoji](https://github.com/tinoji)が[初めてLaTeXで書いたレポート](https://www.slideshare.net/ssuserbd0784/ss-57672851)です。こんな感じのPDFが作れるようになるソフトウェア(というか組版システム)がLaTeXです。
 
 <img src="https://github.com/tinoji/sotsuron_wo_LaTeX_de/blob/master/images/tex_sample.png" width="500px">
 

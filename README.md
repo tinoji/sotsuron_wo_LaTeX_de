@@ -1,24 +1,37 @@
 はじめに
 ======
+まえがき
+------
+これは[tinoji](https://github.com/tinoji)が[2016年にブログに書いた記事](https://www.ketsuago.com/entry/2016/01/30/191934)をGitHubに移行したものです。  
+古い記事にもかからわず、驚くほど多くの学生さんに見ていただいていました。しかしリンク切れが出てきてしまったり、あまりに情報が古くなったりしており、「自分では更新できないし困ったなー。GitHubに置いたら誰かメンテしてくれないかなー。」と思い、移行してみました。  
 
 対象者
 ------
-
 卒論か修論をLaTeXで書きたい人
 
 趣旨・目標
 ----------
+上述の対象者がLaTeXを使用して、
+- なんとなく文章を書き、
+- どうにか数式と図を入れ、
+- 参考文献を付け、
+- そこそこきれいなpdfを出力でき、
+- 卒論程度の長さの文章を書くためのテンプレートを作ったり構成ができる
 
-なんかテンプレートとかネット上に落ちてるけど、いきなり見てもわかんないし、あんまり長い文章に適していない気がするので、わかるように説明する。
+ようになることを目標にしています。  
+すべて説明するのではなく、いい感じのリンク集として機能すればよいかなーと思っています。
 
-OSはWindowsベースで説明しています。MacでもLinuxでも基本的には同じなので参考にはなるかと思います。Macの方は、[泉富士夫先生の作成したマニュアル](http://fujioizumi.verse.jp/download/TeXShop_Japanese.pdf)を参考にするとよいです。
+環境
+----
+OSはWindowsベースで説明しています。MacでもLinuxでも基本的には同じなので参考にはなるかと思います。Macの方は、[泉富士夫先生のマニュアル](http://fujioizumi.verse.jp/download/TeXShop_Japanese.pdf)を参考にするとよいです。
 
-LaTeXってなに？って人へ
+LaTeX is 何
 -----------------------
+これは[tinoji](https://github.com/tinoji)が[初めてLaTexで書いたレポート](https://www.slideshare.net/ssuserbd0784/ss-57672851)です。こんな感じのPDFが作れるようになるやつです。
 
-こんなん書けるようになるやつです。
+TODO: 画像
 
-<div align="center"><http://www.slideshare.net/ssuserbd0784/ss-57672851:embed:cite></div>
+今はMicrosoft Wordでも数式がかなりキレイに挿入できるようになったりしているので、ぶっちゃけそれもありかもしれません。好きなものを使うのが一番です。
 
 
 準備
@@ -26,17 +39,21 @@ LaTeXってなに？って人へ
 
 インストール
 ----------
-http://did2memo.net/2014/03/06/easy-latex-install-windows-8-2014-03/
+古いかもしれませんが、当時は[このインストーラ](http://did2memo.net/2014/03/06/easy-latex-install-windows-8-2014-03/)一択でした。
+Macの人は[こちら](http://osksn2.hep.sci.osaka-u.ac.jp/~taku/osx/install_ptex.html:title)を参考にインストールしてください。
 
-Macの人はこちら（<http://fujioizumi.verse.jp/download/TeXShop_Japanese.pdf>／<http://osksn2.hep.sci.osaka-u.ac.jp/~taku/osx/install_ptex.html:title>）を参考にインストールしてください。
+インストールができて、説明どおりにPDFを生成できればOKです。
+
 
 エディタを決める
 ------------------
-TeXworksで充分。
+最初はデフォルトで入るTeXworksで充分だと思います。慣れてきたら好みのものを探すとよいかと。
 
 適当にプリアンブルを書く
---------------------------
-`\documentclass`から`\begin{document}`の間に書きます。例えばこんな感じです。
+----------------------
+ここから実際にLaTexを書いていきます。
+
+LaTeXでは環境設定のひとつとしてプリアンブルというものをいじる必要があります。プリアンブルはパッケージやマクロを定義するもので。`\documentclass`から`\begin{document}`の間に書きます。例えばこんな感じです。
 
 ```
 \documentclass{jsarticle}
@@ -54,19 +71,20 @@ $\FRAC{1}{2}$
 \end{document}
 ```
 
-`\usepackage`で指定したパッケージが使えるようになるわけですが、上の例ではデフォルトで入っていないパッケージを導入しているので、皆さんが使おうとするとエラーが出るはずです。なのでパッケージを入れてやる必要があります。[ここ](https://texwiki.texjp.org/?LaTeX%E5%85%A5%E9%96%80%2F%E5%90%84%E7%A8%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E5%88%A9%E7%94%A8)などを参考に入れてみましょう。例えば、上の例のoverciteを入れてみましょう。[こちら](http://www.biwako.shiga-u.ac.jp/sensei/kumazawa/tex/overcite.html)からダウンロード可能です。エラーが出なくなれば、プリアンブルで指定したパッケージがすべて入っていることになります。
+`\usepackage`で指定したパッケージが使えるようになるわけですが、上の例ではデフォルトで入っていないパッケージを導入しているので、皆さんが使おうとするとエラーが出るはずです。なのでパッケージを入れてやる必要があります。[こちら](https://texwiki.texjp.org/?LaTeX%E5%85%A5%E9%96%80%2F%E5%90%84%E7%A8%AE%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%81%AE%E5%88%A9%E7%94%A8)などを参考に入れてみましょう。例えば、上の例のoverciteを入れてみましょう。[ここ](http://www.biwako.shiga-u.ac.jp/sensei/kumazawa/tex/overcite.html)からダウンロード可能です。エラーが出なくなれば、プリアンブルで指定したパッケージがすべて入っていることになります。
 
-あとで好きなパッケージ入れるからとりあえずいいわ、って人は、エラーに該当する`\usepackage`の行を消してしまい、先に進みましょう。それでもOKです。
+あとで好きなパッケージ入れるからとりあえずいい、という人は、エラーに該当する`\usepackage`の行を消してしまい、先に進みましょう。
 
-`\newcommand`はマクロの指定です。とりあえず必要ない。
+`\newcommand`はマクロの指定です。とりあえず無視しましょう。
 
 図を入れる
 ========
 
-フォーマットはpdf安定
+フォーマットはPDF安定
 ---------------------
+次は図を入れてみましょう。[色々ややこしい事情があるらしい](https://qiita.com/zr_tex8r/items/5413a29d5276acac3771)ので黙ってPDFにします。余白のカットをしたいときは[PDF slim](http://www.forest.impress.co.jp/library/software/pdfslim/)などを使うとよいです。
 
-黙ってpdfにする。余白のカットをしたいときは[PDF slim](http://www.forest.impress.co.jp/library/software/pdfslim/)とか使う。
+とりあえず何でもよいのでpdfにした画像を用意して入れてみましょう。画像を読み込むときはこんな感じです。画像はとりあえず `*.tex`があるディレクトリの中に入れておけばOKです。※たくさん画像があるとごちゃごちゃしてくるので、後々整理します．
 ```
 \begin{figure}[htbp]
 \centering
@@ -78,6 +96,7 @@ $\FRAC{1}{2}$
 
 ラベルを必ずつけよう
 --------------------
+数式や図にラベルというものを付けることができます。「式(4)では・・・」のような文を書くときに、ベタ書きしてずれてしまうのを防ぐための機能だと思ってOKです。
 
 コマンドは`\label{}`。[こちら](http://www.clas.kitasato-u.ac.jp/~fujiwara/infoScienceB/TeX/ref/labelAndRef.html)を参考にして、数式にラベルを付けてみましょう。
 
@@ -95,33 +114,36 @@ $\FRAC{1}{2}$
 
 文献情報を自分で書く方法
 ------------------------
-
 LaTeXでは参考文献を付け、文献番号をコマンドで呼び出すことができます。[こちら](http://www.latex-cmd.com/struct/thebibliography.html)を見ながらやってみましょう。
 
 予備知識： コマンドライン(非情報系の方向け)
 ------------------------
+コマンドラインを少し使えるようになっておくとよいです。
 - http://techacademy.jp/magazine/5318
 - http://www.atmarkit.co.jp/ait/articles/0708/30/news137.html
 
 Mendeleyと連携しよう
 --------------------
+文献管理に[Mendelay](https://www.mendeley.com/?interaction_required=true)を使ってる人も多いでしょう。LaTexとMendelayを連携すると、文献を引用するためのキーがすぐ取得できて非常に便利です。
 
-Mendeleyと連携する方法は[こちら](http://pioneerboy.hatenablog.com/entry/2014/01/18/214446）をそのままマネすればOKです。リンク先ではDropboxを利用していますが、別に無くてもおｋ。
+Mendeleyと連携する方法は[こちら](http://pioneerboy.hatenablog.com/entry/2014/01/18/214446)をそのままマネすればOKです。リンク先ではDropboxを利用していますが、別にローカルでも問題ありません。
 
-またこの方法だと、一度文献データをコンパイルする必要があります。[こちら](http://akita-nct.jp/yamamoto/comp/latex/bibtex/bibtex.html）も参考にしてください。
+またこの方法だと、一度文献データをコンパイルする必要があります。[こちら](http://akita-nct.jp/yamamoto/comp/latex/bibtex/bibtex.html)も参考にしてください。
 
 一度短いレポートをつくってみよう
 =======================
+ここまでの知識をできるだけ使って短いレポートでも作ってみましょう。  
+冒頭に載せたレポートのtexファイルがPCに残っていたので貼っておきます。画像がないとコンパイルはできませんが、参考にしてください。
 
-ここまでの知識をできるだけ使って短いレポートでも作ってみましょう。
+TODO
+
 
 全体の構成
 =========
 
 jsbookにしよう
 --------------
-
-卒論・修論ぐらいの長い文章を書くときはjsbookがベストだと思いますので変えましょう。ヘッダーに章番号と章タイトルが入ってかっちょええです。
+卒論・修論ぐらいの長い文章を書くときはjsbookがベストだと思いますので変えましょう。ヘッダーに章番号と章タイトルが入ってそれっぽくなります。
 
 ```
 \documentclass[a4paper,10pt,oneside,openany]{jsbook}
@@ -130,25 +152,23 @@ jsbookにしよう
 
 複数章の長い文章を書くときの構成
 --------------------------------
+複数章に渡る長い文章を書くときは、少し工夫をする必要があります。
 
-冒頭で言いましたが、web上に落ちているテンプレートには、長い文章を書くのに適しているものは少ないように感じます。というのも、普通LaTeXで何章にもわたる長い文章を書くときにはそれ相応の手法があるのです。図示するとこんな感じ。
+ひとつのファイルに何万字も書いて図を入れて数式入れて。。。ってのは無理があります。なので、**各チャプターごとにtexファイルを分割**し書いていきます。`\input{}`を使えば、複数のtexファイルをひとつにまとめることができます。ですが、最後に一気にタイプセットして細かい調整をしていくというのは大変ですね。**タイプセットも各チャプターごと**にできた方が絶対便利です。[こちら](http://khmtvx.hatenablog.com/entry/2013/08/19/223003)を参考に。
 
-TODO
-\[f:id:kichiku\_kikuchi:20160130222427j:plain\]
+TODO: 図
 
-ひとつのファイルに何万字も書いて図を入れて数式入れて。。。ってのは無理があります。なので、<b>各チャプターごとにtexファイルを分割</b>し書いていきます。\\input{}を使えば、複数のtexファイルをひとつにまとめることができます。ですが、最後に一気にタイプセットして細かい調整をしていくというのは大変ですね。<b>タイプセットも各チャプターごと</b>にできた方が絶対便利です。[こちら](http://khmtvx.hatenablog.com/entry/2013/08/19/223003）を参考に。
-
-上図のような構成にして、各チャプターのtexファイルとparent.texをタイプセットしてみてください。どちらもタイプセットできればOKです。
+上図のような構成にして、各チャプターのtexファイルと`parent.tex`をタイプセットしてみてください。どちらもタイプセットできればOKです。
 
 図は別フォルダへ
 ----------------
-
-挿入する図（画像）を別ディレクトリに分けます。[ここ](http://homepage.seesaa.net/article/25260276.html）を参考にして、やってみましょう。別ディレクトに置いた図を挿入してparent.texがタイプセットできればOKです！
+挿入する図（画像）を別ディレクトリに分けます。[ここ](http://homepage.seesaa.net/article/25260276.html)を参考にして、やってみましょう。別ディレクトに置いた図を挿入して`parent.tex`がタイプセットできればOKです。
 
 表紙はLaTeXで作らなくてもいい
 -----------------------------
+表紙ももちろん作れるのですが、なかなかうまくいかない印象があります。他のソフトでサクッと作ってしまうのがおすすめです。  
+何で作っても構いませんが、サイズをA4用紙と全く同じにしましょう。210×297mmです。そして、[こちら](http://did2.blog64.fc2.com/blog-entry-483.html)にそって画像位置の調整を行うだけです。リンク先ではEPSを使用していますが、PDFを使いましょう。
 
-何で作っても構いませんが、サイズをA4用紙と全く同じにしましょう。210×297mmです。そして、[こちら](http://did2.blog64.fc2.com/blog-entry-483.html）にそって画像位置の調整を行うだけです。こちらではepsを使用していますが、黙ってpdfを使いましょう。
 powerpointで作った場合、上のサイト通りにやると少しずれたのでちょっとだけ変えています。
 
 ```
@@ -163,81 +183,73 @@ powerpointで作った場合、上のサイト通りにやると少しずれた�
 \includegraphics{cover.pdf}
 ```
 
-また、表紙のtexファイルは個別に作成して上述の\\input{}で取り込むのが良いと思います。最終的なディレクトリ構成は下図のようになるでしょう。
+また、表紙のtexファイルは個別に作成して`\input{}`で取り込むのが良いと思います。最終的なディレクトリ構成は下図のようになります。
 
 TODO
 \[f:id:kichiku\_kikuchi:20160130234205j:plain\]
 
+
 目次をつくろう
 --------------
+サクッとできるはずです。  
 http://www.latex-cmd.com/struct/contents.html
 
+テンプレート例
+------------
+TODO
 
 Advanced編
 ==========
 
 markdownで書いて変換する方法
 ----------------------------
-
-これ
-
-http://mizchi.hatenablog.com/entry/2014/01/20/090957
-
-http://qiita.com/mountcedar/items/e7603c2eb65661369c3b
+普段からmarkdownを使っている人や、極力TeXのコマンドを打ちたくないという人にお勧めの方法です。とても便利です。
+- http://mizchi.hatenablog.com/entry/2014/01/20/090957
+- http://qiita.com/mountcedar/items/e7603c2eb65661369c3b
 
 リアルタイムプレビューする方法
 ------------------------------
-
-これ
-
-http://webmem.hatenablog.com/entry/sublime-text-markdown
+- http://webmem.hatenablog.com/entry/sublime-text-markdown
 
 参考文献のスタイルを変えたい
 ----------------------------
+デフォルトのまま参考文献を出力すると、こんな感じになると思います。
+```
+George M Sheldrick. A short history of SHELX. Acta Crystallographica Section A Foundations of Crystallography, 64:112–22, January 2008.
+```
 
-これ。
+つまり、
+```
+ファーストネーム　ミドルネームの頭文字　ファミリーネーム．タイトル．出版物名（イタリック），巻数：ページ， 出版月　出版年．
+```
 
-http://www.ketsuago.com/entry/2015/03/16/231806
+という感じです。このスタイルは学問分野によって様々で、研究室によってはこのジャーナルの形式に合わせよ、なんていう決まりがあるかもしれません。結構つらいので、あまりこだわらない人はやめておいた方が身のためです。
+
+- http://www.ketsuago.com/entry/2015/03/16/231806
 
 その他
 =====
 
 図などを思い通りの位置に入れるコツ
 ----------------------------------
-
-とにかく`\vspace`、`\hspace`でいじくれば解決できることが多いです。
+とにかく`\vspace`、`\hspace`でいじって調整するのが手っ取り早い気がします。
 
 便利ツール
 ----------
-
-あんまりつかったことないですが色々あります。私が使ったことあるのは、MyScript MathPadというiOSのアプリぐらいですかね。手書きで書いた数式をTeX形式に変換してくれるアプリです。コマンドを覚えるまでは便利ですが、覚えたら要らなくなります。
-
-https://itunes.apple.com/jp/app/myscript-mathpad-jeneretalatexno/id674996719?mt=8&uo=4
-
-各種変換ツールはこちら。
-
-https://texwiki.texjp.org//?%E5%A4%89%E6%8F%9B%E3%83%84%E3%83%BC%E3%83%AB
+あんまりつかったことないですが色々あります。手書きで書いた数式をTeX形式に変換してくれるアプリを使ったことがあるのですが、もうStoreから消えていました。探せば新しいものがあるはずです。
 
 
 その他のリンク集
 ----------------
-TODO
-
-http://webmem.hatenablog.com/entry/how-to-write-a-modern-latex-for-academic-papers
-http://qiita.com/amayaw9/items/01d626ce1ae18c27df8b
-http://www.biwako.shiga-u.ac.jp/sensei/kumazawa/tex/011.html
-http://osksn2.hep.sci.osaka-u.ac.jp/~naga/miscellaneous/tex/tex-tips1.html#Anchor-1.-42085
-http://ichiro-maruta.blogspot.jp/2013/03/latex.html
-http://joker.hatenablog.com/entry/2012/07/09/153537
-http://dayinthelife.at.webry.info/201401/article_2.html
-http://hnsn1202.hateblo.jp/entry/2012/06/07/030443
+- [卒論/修論/博論のためのモダンなLaTeXの書き方](http://webmem.hatenablog.com/entry/how-to-write-a-modern-latex-for-academic-papers)
+- [BibTeXのインストール](http://qiita.com/amayaw9/items/01d626ce1ae18c27df8b)
+- [目次の変え方](http://osksn2.hep.sci.osaka-u.ac.jp/~naga/miscellaneous/tex/tex-tips1.html#Anchor-1.-42085)
+- [使ってはいけない LaTeX のコマンド・パッケージ・作法](http://ichiro-maruta.blogspot.jp/2013/03/latex.html)
+- [TeXのjsarticleで余白設定](http://joker.hatenablog.com/entry/2012/07/09/153537)
+- [geometry パッケージによるページレイアウトの設定](http://dayinthelife.at.webry.info/201401/article_2.html)
+- [初心者がutf8でLaTeXとBibTeXを使うための一通りの準備](http://hnsn1202.hateblo.jp/entry/2012/06/07/030443)
 
 参考書
 ------
-
-一応、参考書がなくても書けるようになることを目標にしていましたが、やはり一冊本があると安心します。超名著なので無駄にはならないはず。
-TODO
-
-http://www.amazon.co.jp/%E6%94%B9%E8%A8%82%E7%AC%AC6%E7%89%88-LaTeX2%CE%B5%E7%BE%8E%E6%96%87%E6%9B%B8%E4%BD%9C%E6%88%90%E5%85%A5%E9%96%80-%E5%A5%A5%E6%9D%91-%E6%99%B4%E5%BD%A6/dp/4774160458/ref=sr_1_1?ie=UTF8&qid=1454910053&sr=8-1&keywords=latex
-
-http://www.amazon.co.jp/%E6%94%B9%E8%A8%82%E7%AC%AC5%E7%89%88-LaTeX2e-%E7%BE%8E%E6%96%87%E6%9B%B8%E4%BD%9C%E6%88%90%E5%85%A5%E9%96%80-%E5%A5%A5%E6%9D%91-%E6%99%B4%E5%BD%A6/dp/4774143197/ref=sr_1_8?ie=UTF8&qid=1454910053&sr=8-8&keywords=latex
+こちらを買うことをおすすめします。
+- https://www.amazon.co.jp/dp/4774187054/ref=cm_sw_em_r_mt_dp_U_A.xpEbAM24K6H

@@ -124,7 +124,7 @@ LaTeXでは参考文献を付け、文献番号をコマンドで呼び出すこ
 
 予備知識： コマンドライン(非情報系の方向け)
 ------------------------
-コマンドラインを少し使えるようになっておくとよいです。
+以下のMendelayとの連携で使うので、コマンドラインをちょっと使えるようになっておくとよいです。
 - http://techacademy.jp/magazine/5318
 - http://www.atmarkit.co.jp/ait/articles/0708/30/news137.html
 
@@ -175,7 +175,7 @@ jsbookにしよう
 表紙ももちろん作れるのですが、なかなかうまくいかない印象があります。他のソフトでサクッと作ってしまうのがおすすめです。  
 何で作っても構いませんが、サイズをA4用紙と全く同じにしましょう。210×297mmです。そして、[こちら](http://did2.blog64.fc2.com/blog-entry-483.html)にそって画像位置の調整を行うだけです。リンク先ではEPSを使用していますが、PDFを使いましょう。
 
-powerpointで作った場合、上のサイト通りにやると少しずれたのでちょっとだけ変えています。
+PowerPointで作った場合、上のサイト通りにやると少しずれたのでちょっとだけ変えています。
 
 ```
 \enlargethispage{\paperwidth}
@@ -203,9 +203,9 @@ http://www.latex-cmd.com/struct/contents.html
 Advanced編
 ==========
 
-markdownで書いて変換する方法
+Markdownで書いて変換する方法
 ----------------------------
-普段からmarkdownを使っている人や、極力TeXのコマンドを打ちたくないという人にお勧めの方法です。とても便利です。
+普段からMarkdownを使っている人や、極力TeXのコマンドを打ちたくないという人にお勧めの方法です。とても便利です。
 - http://mizchi.hatenablog.com/entry/2014/01/20/090957
 - http://qiita.com/mountcedar/items/e7603c2eb65661369c3b
 
@@ -229,6 +229,8 @@ George M Sheldrick. A short history of SHELX. Acta Crystallographica Section A F
 
 - http://www.ketsuago.com/entry/2015/03/16/231806
 
+<br>
+
 その他
 =====
 
@@ -239,7 +241,6 @@ George M Sheldrick. A short history of SHELX. Acta Crystallographica Section A F
 便利ツール
 ----------
 あんまりつかったことないですが色々あります。手書きで書いた数式をTeX形式に変換してくれるアプリを使ったことがあるのですが、もうStoreから消えていました。探せば新しいものがあるはずです。
-
 
 その他のリンク集
 ----------------
@@ -253,5 +254,5 @@ George M Sheldrick. A short history of SHELX. Acta Crystallographica Section A F
 
 参考書
 ------
-こちらを買うことをおすすめします。
+こちらを買うことをおすすめします。名著です。
 - https://www.amazon.co.jp/dp/4774187054/ref=cm_sw_em_r_mt_dp_U_A.xpEbAM24K6H

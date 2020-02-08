@@ -35,7 +35,14 @@ LaTeX is 何
 
 <img src="https://github.com/tinoji/sotsuron_wo_LaTeX_de/blob/master/images/tex_sample.png" width="500px">
 
-今はMicrosoft Wordでも数式がかなりキレイに挿入できるようになったりしているので、ぶっちゃけそれもありかもしれません。好きなものを使いましょう。
+
+Word v.s. LaTeX
+----------------
+好きなものを使えばよいかと:wink:  
+昔はMicrosoft Wordの数式は使いにくい、字幅の調整がダメ、みたいな風潮がありましたが、今はどうかわかりません。研究室のマジョリティに合わせるのも一つの手かと思います。
+- [結局のところ, TeX (+ LyX) と Word のどちらが文書作成しやすいのか](http://ill-identified.hatenablog.com/entry/2017/05/02/235413)
+- [僕が TeX を使うのを辞めた3つの理由](https://ufcpp.hatenadiary.org/entry/20100216/1266337507)
+- [【Word】レポート・卒論作成で使う機能の総まとめ(事前準備用テキスト)](https://www.waenavi.com/entry/20181107/1541539900)
 
 <br>
 
@@ -45,18 +52,20 @@ LaTeX is 何
 インストール
 ----------
 古いかもしれませんが、当時は[このインストーラ](http://did2memo.net/2014/03/06/easy-latex-install-windows-8-2014-03/)一択でした。
-Macの人は[こちら](http://osksn2.hep.sci.osaka-u.ac.jp/~taku/osx/install_ptex.html:title)を参考にインストールしてください。
-
-インストールができて、説明どおりにPDFを生成できればOKです。
+Macの人は[こちら](http://osksn2.hep.sci.osaka-u.ac.jp/~taku/osx/install_ptex.html:title)を参考にインストールしてください。インストールができて、説明どおりにPDFを生成できればOKです。
 
 
 エディタを決める
 ------------------
-最初はデフォルトで入るTeXworksで充分だと思います。慣れてきたら好みのものを探すとよいかと。
+最初はデフォルトで入るTeXworksで充分だと思います。慣れてきたら好みのものを探すとよいかと。有名どころだけでもTeXmaker、TeXstudioなど色々あります。最近はオンラインエディタもあるので、クラウドにデータを置いて家でも研究室でも書ける、みたいなのがモダンかもしれません。
+- [10 Best LaTeX Editors You Should Use](https://beebom.com/best-latex-editors/)
+- [Cloud LaTeX](https://cloudlatex.io/)
+- [Overleaf](https://ja.overleaf.com/)
+
 
 適当にプリアンブルを書く
 ----------------------
-ここから実際にLaTexを書いていきます。
+ここから実際にLaTeXを書いていきます。
 
 LaTeXでは環境設定のひとつとしてプリアンブルというものをいじる必要があります。プリアンブルはパッケージやマクロを定義するもので。`\documentclass`から`\begin{document}`の間に書きます。例えばこんな感じです。
 
